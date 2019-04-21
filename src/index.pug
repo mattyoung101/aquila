@@ -6,12 +6,17 @@ html(lang="en")
         title Aquila
         meta(charset="utf-8")
 
+        link(rel="apple-touch-icon", sizes="180x180", href=require("../assets/apple-touch-icon.png"))
+        link(rel="icon", type="image/png", sizes="32x32", href=require("../assets/favicon-32x32.png"))
+        link(rel="icon", type="image/png", sizes="16x16", href=require("../assets/favicon-16x16.png"))
+
     body
         nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.main-navigation
             a.navbar-brand(href="#")
                 img#aquila-logo(src=require("../assets/aquila-logo-white.png"))
             
-            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', 
+            aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
                 span.navbar-toggler-icon
 
             #navbarSupportedContent.collapse.navbar-collapse
@@ -28,4 +33,4 @@ html(lang="en")
                 .col-sm-7
                     +displayTable("TSOP strength", "tsopChart")
                 .col-sm-5
-                    //- +displayTable("TSOP display")
+                    +displayTable("TSOP ring", "tsopCanvas", 600, 400)
