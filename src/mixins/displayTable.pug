@@ -1,0 +1,10 @@
+mixin displayTable(name, canvasId, width=1000, height=256)
+    table.table
+    thead
+        tr
+            th(scope='col')= name
+    tbody
+        tr
+            td
+                //- canvas#tsopChart(width="1000", height="256")
+                canvas(id=canvasId, width=width, height=height)

@@ -1,0 +1,31 @@
+include mixins/displayTable.pug
+
+doctype html
+html(lang="en")
+    head
+        title Aquila
+        meta(charset="utf-8")
+
+    body
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.main-navigation
+            a.navbar-brand(href="#")
+                img#aquila-logo(src=require("../assets/aquila-logo-white.png"))
+            
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+
+            #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link(href='#') Robot 1
+                    li.nav-item
+                        a.nav-link(href='#') Robot 2
+                span.navbar-text(style="color: red;")
+                    | Confidential - for BBC viewing only
+
+        .container-fluid
+            .row
+                .col-sm-7
+                    +displayTable("TSOP strength", "tsopChart")
+                .col-sm-5
+                    //- +displayTable("TSOP display")
