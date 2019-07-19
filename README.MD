@@ -1,4 +1,7 @@
 # Aquila
+### Important notice
+> **This project has been terminated and replaced with a new one (Omicontrol), written in Kotlin, which may be released in the future.**
+
 Team Deus Vult's robot monitoring webapp. Data is sent over Wi-Fi from our robot's software, converted from raw TCP sockets into WebSockets
 and then displayed and processed in the browser.
 
